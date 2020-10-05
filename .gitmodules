@@ -1,0 +1,8 @@
+[submodule "src/odoo"]
+	path = src/odoo
+	url = https://github.com/odoo/odoo
+	branch = 13.0
+[submodule "src/runbot"]
+	path = src/runbot
+	url = https://github.com/odoo/runbot
+	branch = 13.0
