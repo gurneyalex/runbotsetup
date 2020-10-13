@@ -4,5 +4,5 @@
 	branch = 13.0
 [submodule "src/runbot"]
 	path = src/runbot
-	url = https://github.com/odoo/runbot
+	url = https://github.com/gurneyalex/runbot
 	branch = 13.0
