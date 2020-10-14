@@ -26,6 +26,15 @@ $ createdb -p 5444 -O odoo runbotdb
 * configure the cluster to listen on a public network interface if needed
 * allow access from other runbot nodes
 
+Odoo dependencies
+
+sudo apt install python3-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev \
+    libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev libfreetype6-dev \
+    liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libpq-dev
+
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
+sudo apt install nodejs
+
 then run
 
 DBHOST=hostname.of.db.server DBPASSWD=odoouserpasswd DBPORT=5444  ./install.sh
