@@ -28,9 +28,7 @@ $ createdb -p 5444 -O odoo runbotdb
 
 Odoo dependencies
 
-sudo apt install python3-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev \
-    libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev libfreetype6-dev \
-    liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libpq-dev
+sudo apt install git python3-dev virtualenv python3-virtualenv gcc libsasl2-dev libldap2-dev
 
 curl -sL https://deb.nodesource.com/setup_10.x | bash -
 sudo apt install nodejs
