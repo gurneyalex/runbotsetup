@@ -8,5 +8,7 @@
     'category': 'Website',
     'depends': ['runbot'],
     'data': [
+        'templates/dockerfile.xml',
+        'data/build_config_data.xml',
     ],
 }

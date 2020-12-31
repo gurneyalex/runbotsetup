@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template inherit_id="runbot.docker_base" id='docker_base_with_git'>
+            <xpath expr='(//t[@t-set="deb_packages"])[1]' position="attributes">
+                <attribute name="t-value">values['deb_package_default'] + ' git'</attribute>
+            </xpath>
+        </template>
+    </data>
+</odoo>
