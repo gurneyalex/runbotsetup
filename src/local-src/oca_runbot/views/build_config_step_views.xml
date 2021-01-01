@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="config_step_form" model="ir.ui.view">
+        <field name="model">runbot.build.config.step</field>
+        <field name="inherit_id" ref="runbot.config_step_form"/>
+        <field name="arch" type="xml">
+            <field name="install_modules" position="after">
+                <field name="install_dependencies"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

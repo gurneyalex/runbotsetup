@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="runbot_build_config_step_install_deps" model="runbot.build.config.step">
+        <field name="name">install-deps</field>
+        <field name="install_modules"></field>
+        <field name="test_enable" eval="True"/>
+        <field name="install_dependencies" eval="True"/>
+        <field name="protected" eval="True"/>
+        <field name="default_sequence">15</field>
+    </record>
+
+</odoo>
