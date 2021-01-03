@@ -14,3 +14,7 @@
 	path = src/web
 	url = git@github.com:OCA/web
 	branch = 13.0
+[submodule "src/server-ux"]
+	path = src/server-ux
+	url = git@github.com:OCA/server-ux
+	branch = 13.0
