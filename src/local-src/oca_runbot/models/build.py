@@ -81,7 +81,7 @@ class Build(models.Model):
                 if commit.repo_id in dependency_repos:
                     # we don't want modules from the dependency repositories
                     continue
-                _logger.info('checking: %r/%r/%r', addons_path, module, manifest_path)
+                _logger.debug('checking: %r/%r/%r', addons_path, module, manifest_path)
                 try:
                     dirname = commit._source_path()
                     filename = osp.join(dirname, addons_path, module, manifest_path)
@@ -152,6 +152,6 @@ class BuildConfigStep(models.Model):
             pres.append(['echo', '"This may take a while"'])
             pres.append(preinstall)
             pres.append(['echo', '"Done preinstalling dependencies"'])
-        _logger.info('command.pres: %s', command.pres)
-        _logger.info('command.cmd: %s', command.cmd)
+        _logger.debug('command.pres: %s', command.pres)
+        _logger.debug('command.cmd: %s', command.cmd)
         return cmd
