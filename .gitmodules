@@ -6,3 +6,11 @@
 	path = src/runbot
 	url = https://github.com/gurneyalex/runbot
 	branch = 13.0
+[submodule "src/server-tools"]
+	path = src/server-tools
+	url = git@github.com:OCA/server-tools
+	branch = 13.0
+[submodule "src/web"]
+	path = src/web
+	url = git@github.com:OCA/web
+	branch = 13.0

@@ -14,7 +14,7 @@ pip install -r src/runbot/requirements.txt
 
 src/odoo/odoo-bin  -c runbot.conf --save \
                    -d runbot --db_port ${DBPORT} --db_host ${DBHOST} -w $DBPASSWD \
-                   --addons-path=./src/odoo/addons,./src/runbot,./src/local-src \
+                   --addons-path=./src/odoo/addons,./src/runbot,./src/local-src,./src/server-tools,./src/web \
                    --limit-memory-soft 4294967296 --limit-memory-hard 4311744512 --limit-time-real-cron=1800 \
-                   -i runbot --without-demo=1 \
+                   -i runbot,oca_runbot,web_responsive,mass_editing --without-demo=1 \
                    --stop-after-init
