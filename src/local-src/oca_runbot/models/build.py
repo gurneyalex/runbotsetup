@@ -152,6 +152,9 @@ class BuildConfigStep(models.Model):
             pres.append(['echo', '"This may take a while"'])
             pres.append(preinstall)
             pres.append(['echo', '"Done preinstalling dependencies"'])
+        if self.coverage:
+            idx = command.cmd.index('/data/build')
+            command.cmd[idx] = '/tmp'
         _logger.debug('command.pres: %s', command.pres)
         _logger.debug('command.cmd: %s', command.cmd)
         return cmd
