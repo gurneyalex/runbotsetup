@@ -8,13 +8,13 @@
 	branch = 13.0
 [submodule "src/server-tools"]
 	path = src/server-tools
-	url = git@github.com:OCA/server-tools
+	url = https://github.com/OCA/server-tools
 	branch = 13.0
 [submodule "src/web"]
 	path = src/web
-	url = git@github.com:OCA/web
+	url = https://github.com/OCA/web
 	branch = 13.0
 [submodule "src/server-ux"]
 	path = src/server-ux
-	url = git@github.com:OCA/server-ux
+	url = https://github.com/OCA/server-ux
 	branch = 13.0
