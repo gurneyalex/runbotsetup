@@ -8,17 +8,17 @@ ADD https://raw.githubusercontent.com/OCA/oca-ci/master/bin/oca_list_external_de
 RUN chmod +rx /usr/local/bin/oca_list_external_dependencies /usr/local/bin/oca_install_addons
     </template>
 
-        <template inherit_id="runbot.docker_base" id='docker_base_oca'>
-            <xpath expr='(//t[@t-set="deb_packages"])[1]' position="attributes">
-                <attribute name="t-value">values['deb_package_default'] + ' git'</attribute>
-            </xpath>
-            <xpath expr="//t[@t-call='runbot.docker_install_odoo_python_requirements']" position="after">
-                <t t-call="oca_runbot.install_oca_ci"/>
-            </xpath>
-        </template>
+    <template inherit_id="runbot.docker_base" id='docker_base_oca'>
+        <xpath expr='(//t[@t-set="deb_packages"])[1]' position="attributes">
+            <attribute name="t-value">values['deb_package_default'] + ' git'</attribute>
+        </xpath>
+        <xpath expr="//t[@t-call='runbot.docker_install_odoo_python_requirements']" position="after">
+            <t t-call="oca_runbot.install_oca_ci"/>
+        </xpath>
+    </template>
 
-        <template id="docker_base_python2" inherit_id="runbot.docker_base" mode="primary">
-            <xpath expr="//t[@t-set='default']" position="replace">
+    <template id="docker_base_python2" inherit_id="runbot.docker_base" primary="1">
+        <xpath expr="//t[@t-set='default']" position="replace">
             <t t-set="default" t-value="{
 'from': 'ubuntu:bionic',
 'odoo_branch': 'master',
@@ -34,8 +34,8 @@ RUN chmod +rx /usr/local/bin/oca_list_external_dependencies /usr/local/bin/oca_i
 'deb_packages_python': 'python python-dev python-pip python-setuptools python-wheel python-markdown libpq-dev', 'deb_package_default': 'apt-transport-https build-essential ca-certificates curl ffmpeg file fonts-freefont-ttf fonts-noto-cjk gawk gnupg libldap2-dev libsasl2-dev libxslt1-dev lsb-release node-less ocrmypdf sed sudo unzip xfonts-75dpi zip zlib1g-dev git',
 'additional_pip': 'coverage==4.5.4 websocket-client astroid==2.4.2 pylint==2.6.0 phonenumbers pyCrypto dbfread==2.0.7 firebase-admin==2.17.0 flamegraph pdfminer.six==20200720 pdf417gen==0.7.1'
             }"/>
-            </xpath>
-        </template>
-  </data>
+        </xpath>
+    </template>
+    </data>
 
 </odoo>
