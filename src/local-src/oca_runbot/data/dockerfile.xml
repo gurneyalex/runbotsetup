@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="runbot.dockerfile" id="docker_python2">
+        <field name="name">Docker Python2</field>
+        <field name="template_id" ref="docker_base_python2"/>
+        <field name="to_build">True</field>
+        <field name="description">Default Dockerfile for Odoo before 11.0.</field>
+    </record>
+</odoo>
