@@ -17,7 +17,7 @@ RUN chmod +rx /usr/local/bin/oca_list_external_dependencies /usr/local/bin/oca_i
         </xpath>
     </template>
 
-    <template id="docker_base_python2" inherit_id="runbot.docker_base" primary="1">
+    <template id="docker_base_python2" inherit_id="runbot.docker_base" primary="True">
         <xpath expr="//t[@t-set='default']" position="replace">
             <t t-set="default" t-value="{
 'from': 'ubuntu:bionic',
