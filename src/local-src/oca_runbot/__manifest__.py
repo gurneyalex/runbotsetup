@@ -10,6 +10,7 @@
     'data': [
         'templates/dockerfile.xml',
         'data/build_config_data.xml',
+        'data/dockerfile.xml',
         'views/build_config_step_views.xml',
     ],
 }

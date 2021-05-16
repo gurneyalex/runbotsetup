@@ -144,7 +144,11 @@ class BuildConfigStep(models.Model):
                 preinstall.remove('--test-enable')
             except ValueError:
                 pass
-            idx = preinstall.index('-i')
+            try:
+                idx = preinstall.index('-i')
+            except ValueError:
+                _logger.error('could not find "-i" in %s', preinstal)
+                _logger.error('FTR: orifinal command %s', command.cmd)
             dependencies = self._dependency_modules_to_install(build)
             build._log(
                 'install_odoo',

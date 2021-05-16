@@ -12,7 +12,7 @@ RUN chmod +rx /usr/local/bin/oca_list_external_dependencies /usr/local/bin/oca_i
             <xpath expr='(//t[@t-set="deb_packages"])[1]' position="attributes">
                 <attribute name="t-value">values['deb_package_default'] + ' git'</attribute>
             </xpath>
-            <xpath expr="//t[@t-call='runbot.docker_install_odoo_python_requirements'] position="after">
+            <xpath expr="//t[@t-call='runbot.docker_install_odoo_python_requirements']" position="after">
                 <t t-call="oca_runbot.install_oca_ci"/>
             </xpath>
         </template>
