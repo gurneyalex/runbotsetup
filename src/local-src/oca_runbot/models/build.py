@@ -62,6 +62,14 @@ class Build(models.Model):
             # I get a crash installing pyyaml when using this, removing for now
             # '--extra-index-url', 'https://wheelhouse.odoo-community.org/oca-simple/'
         ])
+        pres.append([
+            'export', 'DEBIAN_FRONTEND=noninteractive'])
+        pres.append([
+            'sudo', 'apt-get', 'update'])
+        pres.append([
+            'sudo', 'apt-get', 'install', '-qq', '--no-install-recommends',
+            '$(oca_list_external_dependencies deb)'
+        ])
         return command
 
     def _get_addons_path(self):
